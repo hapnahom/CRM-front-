@@ -1,0 +1,38 @@
+/* RatingSection.css */
+
+/* Adjusting the Title margins */
+.lead-rating-title {
+  /* Using !important to override Ant Design's default margins if necessary,
+       but it's generally better to be more specific with selectors or use
+       Ant Design's theme customization if possible for more complex styling. */
+  margin-top: 20px !important; /* Example adjustment */
+  margin-bottom: 10px !important; /* Example adjustment */
+  font-size: 18px; /* Example font size */
+  color: #333; /* Example color */
+}
+
+/* Styling the Form.Item to remove default bottom margin */
+.lead-rating-form-item {
+  margin-bottom: 0 !important;
+}
+
+/* Customizing the Ant Design Rate component */
+.custom-rate .ant-rate-star-full .ant-rate-star-icon,
+.custom-rate .ant-rate-star-half .ant-rate-star-icon {
+  color: #ffc107; /* Gold color for filled stars */
+  /* You can adjust the size of the stars as well */
+  font-size: 24px; /* Example star size */
+}
+
+.custom-rate .ant-rate-star-zero .ant-rate-star-icon {
+  color: #e0e0e0; /* Light grey for empty stars */
+  font-size: 24px; /* Maintain consistent size */
+}
+
+/* Optional: Hover effect for interactive ratings */
+.custom-rate:not(.ant-rate-disabled)
+  .ant-rate-star:hover
+  .ant-rate-star-full
+  .ant-rate-star-icon {
+  color: #ffd700; /* Slightly brighter gold on hover */
+}

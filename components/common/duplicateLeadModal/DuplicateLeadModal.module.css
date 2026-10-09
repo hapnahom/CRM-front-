@@ -1,0 +1,88 @@
+/* Duplicate Lead Modal Styles */
+.duplicate-lead-modal .ant-modal-header {
+  border-bottom: none;
+  padding: 24px 24px 0 24px;
+}
+
+.duplicate-lead-modal .ant-modal-body {
+  padding: 0 24px 24px 24px;
+}
+
+.duplicate-lead-modal .ant-modal-footer {
+  border-top: none;
+  padding: 0 24px 24px 24px;
+}
+
+.lead-card {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.lead-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.lead-name {
+  font-weight: 700;
+  font-size: 16px;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.lead-company {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.lead-date {
+  color: #6b7280;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.lead-contact {
+  color: #374151;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.lead-contact:last-child {
+  margin-bottom: 0;
+}
+
+.contact-icon {
+  margin-right: 8px;
+  color: #6b7280;
+}
+
+.continue-button {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+  font-weight: 500;
+  height: auto;
+  padding: 12px 32px;
+}
+
+.continue-button:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.cancel-button {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  font-weight: 500;
+  height: auto;
+  padding: 12px 32px;
+}
+
+.cancel-button:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}

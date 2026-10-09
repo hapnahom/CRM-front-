@@ -1,0 +1,686 @@
+/* Force Ant Design Layout.Content to have zero padding so page content
+   sits flush against the top navbar and sidebar */
+.ant-layout-content {
+  padding: 0 !important;
+}
+
+/* Custom delete confirmation modal styles (ONLY for lead/file deletion modals) */
+/* Highly specific selectors to avoid affecting other modals */
+.ant-modal-confirm.custom-confirm-modal .ant-modal-confirm-btns {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-top: 24px !important;
+}
+
+.ant-modal-confirm.custom-confirm-modal .ant-modal-confirm-btns .ant-btn {
+  margin: 0 !important;
+}
+
+/* Title styling - only for delete confirmation modals */
+.ant-modal-confirm.custom-confirm-modal .ant-modal-confirm-title {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  margin-bottom: 16px !important;
+}
+
+.ant-modal-confirm.custom-confirm-modal .ant-modal-confirm-content {
+  text-align: center !important;
+}
+
+/* Hide warning icon - only for delete confirmation modals */
+.ant-modal-confirm.custom-confirm-modal
+  .ant-modal-confirm-body
+  .ant-modal-confirm-body-wrapper
+  .ant-modal-confirm-icon {
+  display: none !important;
+}
+
+@font-face {
+  font-family: var(--font-sans-token);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@200..800&display=swap');
+}
+
+/* Custom select styles for lead detail pages - gray-800 border, no hover effects */
+.custom-select-lead-detail .ant-select-selector {
+  border-color: var(--color-text-primary) !important;
+  /* border-gray-800 */
+  border-width: 1px !important;
+  /* Match regular input fields */
+}
+
+/* Remove all hover effects - keep same border color */
+.custom-select-lead-detail .ant-select-selector:hover {
+  border-color: var(--color-text-primary) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.custom-select-lead-detail .ant-select-selector:focus {
+  border-color: var(--color-text-primary) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.custom-select-lead-detail .ant-select-selector:active {
+  border-color: var(--color-text-primary) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.custom-select-lead-detail.ant-select-focused .ant-select-selector {
+  border-color: var(--color-text-primary) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+/* Override Ant Design's default styles - force static gray-800 border for lead detail pages */
+.custom-select-lead-detail .ant-select-selector,
+.custom-select-lead-detail .ant-select-selector:not(.ant-select-disabled):hover,
+.custom-select-lead-detail .ant-select-selector:not(.ant-select-disabled):focus,
+.custom-select-lead-detail
+  .ant-select-selector:not(.ant-select-disabled):active {
+  border-color: var(--color-text-primary) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+/* DatePicker styling for lead detail pages - gray-800 border, no hover effects */
+.custom-select-lead-detail.ant-picker {
+  border-color: var(--color-text-primary) !important;
+  /* border-gray-800 */
+  border-width: 1px !important;
+  /* Match regular input fields */
+}
+
+.custom-select-lead-detail.ant-picker:hover {
+  border-color: var(--color-text-primary) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.custom-select-lead-detail.ant-picker:focus,
+.custom-select-lead-detail.ant-picker.ant-picker-focused {
+  border-color: var(--color-text-primary) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.custom-select-lead-detail.ant-picker:active {
+  border-color: var(--color-text-primary) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+/* Specific styling for role and user dropdowns - gray-400 border */
+.role-user-select .ant-select-selector {
+  border-color: var(--color-text-subtle) !important;
+  /* border-gray-400 */
+  border-width: 1px !important;
+  border-radius: var(--radius-md) !important;
+  /* rounded-md */
+}
+
+.role-user-select .ant-select-selector:hover {
+  border-color: var(--color-text-subtle) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.role-user-select .ant-select-selector:focus {
+  border-color: var(--color-text-subtle) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.role-user-select .ant-select-selector:active {
+  border-color: var(--color-text-subtle) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.role-user-select.ant-select-focused .ant-select-selector {
+  border-color: var(--color-text-subtle) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+/* Restore original FilterModal styling - light gray with hover effects */
+.custom-select-hover .ant-select-selector {
+  border-color: var(--color-border-strong) !important;
+  /* border-gray-300 */
+  border-width: 1px !important;
+}
+
+.custom-select-hover .ant-select-selector:hover {
+  border-color: var(--color-border-focus) !important;
+  /* border-gray-600 */
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.custom-select-hover .ant-select-selector:focus {
+  border-color: var(--color-border-focus) !important;
+  /* border-gray-600 */
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.custom-select-hover .ant-select-selector:active {
+  border-color: var(--color-border-focus) !important;
+  /* border-gray-600 */
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.custom-select-hover.ant-select-focused .ant-select-selector {
+  border-color: var(--color-border-focus) !important;
+  /* border-gray-600 */
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+/* Custom table styles for leads */
+.custom-table {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border-top: none !important;
+  /* Remove top border */
+  border-bottom: 2px solid rgba(229, 231, 235, 0.9);
+  /* Bottom border with same separator styling */
+  border-left: none !important;
+  /* Remove left border */
+  border-right: none !important;
+  /* Remove right border */
+}
+
+/* Ensure table header alignment */
+.custom-table .ant-table-thead {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+}
+
+/* Ensure seamless transition from header to body */
+.custom-table .ant-table-thead + .ant-table-tbody {
+  margin-top: -1px !important;
+  /* Negative margin to pull body up */
+  padding-top: 0 !important;
+}
+
+/* Force the first row to stick to header */
+.custom-table .ant-table-tbody {
+  margin-top: -1px !important;
+  /* Pull entire body up */
+}
+
+/* Table body styling - consolidated */
+.custom-table .ant-table-tbody {
+  margin-top: -1px !important;
+  /* Pull body up to eliminate gap */
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+
+/* Remove any default spacing in table container */
+.custom-table .ant-table-container {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+}
+
+/* Ensure table has no extra spacing */
+.custom-table .ant-table {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Leads table header styling - unified and consistent */
+.leads-table .ant-table-thead > tr > th {
+  font-size: var(--text-base) !important;
+  font-weight: 600 !important;
+  font-family: var(--font-sans-token) !important;
+  color: var(--color-text-primary) !important;
+  /* text-gray-900 */
+  background-color: var(--color-surface-elevated) !important;
+  /* bg-gray-50 */
+  border-bottom: none !important;
+  /* Remove border for seamless transition */
+  padding: 12px 12px !important;
+  /* Consistent padding */
+  text-align: left !important;
+  text-transform: none !important;
+  /* Normal case */
+  letter-spacing: normal !important;
+  /* Normal spacing */
+  line-height: 1.4 !important;
+  /* Better line height */
+  height: auto !important;
+  margin: 0 !important;
+  vertical-align: middle !important;
+  /* Center align vertically */
+}
+
+/* Very close spacing between checkbox and leads name columns */
+.leads-table .ant-table-thead > tr > th:first-child {
+  padding-right: 0px !important;
+  /* No padding for checkbox header */
+}
+
+.leads-table .ant-table-thead > tr > th:nth-child(2) {
+  padding-left: 0px !important;
+  /* No padding for leads name header */
+}
+
+/* Remove the problematic rule entirely or modify it */
+.leads-table .ant-table-tbody > tr > td span {
+  font-size: var(--text-base) !important;
+  font-weight: 400 !important;
+  font-family: var(--font-sans-token) !important;
+  /* Remove this line: color: var(--color-text-primary) !important; */
+}
+
+/* Add specific color for regular table content (not buttons) */
+.leads-table .ant-table-tbody > tr > td:not(:has(.ant-btn)) span {
+  color: var(--color-text-primary) !important;
+}
+
+/* Ensure button content inherits its color */
+.leads-table .ant-table-tbody > tr > td .ant-btn,
+.leads-table .ant-table-tbody > tr > td .ant-btn span,
+.leads-table .ant-table-tbody > tr > td .ant-btn .anticon {
+  color: inherit !important;
+}
+
+/* Keep custom colors when dropdown is open or button is active using CSS custom properties */
+.lead-stage-button,
+.lead-stage-button:focus,
+.lead-stage-button:active,
+.lead-stage-button:hover {
+  color: var(--button-text-color, inherit) !important;
+  border-color: var(--button-border-color, inherit) !important;
+  background: var(--button-background-color, inherit) !important;
+}
+
+/* Ensure icon inherits color using CSS custom properties */
+.lead-stage-button .anticon {
+  color: var(--button-text-color, inherit) !important;
+}
+
+/* Special styling for loading states */
+.leads-table .ant-table-tbody > tr > td span.text-gray-500 {
+  color: var(--color-text-muted) !important;
+  /* text-gray-500 for loading states */
+}
+
+/* Remove ALL previous empty row rules and replace with this */
+
+/* Hide both placeholder and measuring rows */
+.leads-table .ant-table-tbody > tr.ant-table-placeholder,
+.leads-table .ant-table-tbody > tr.ant-table-measure-row {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide their cells too */
+.leads-table .ant-table-tbody > tr.ant-table-placeholder > td,
+.leads-table .ant-table-tbody > tr.ant-table-measure-row > td {
+  display: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  visibility: hidden !important;
+}
+
+/* Ensure the table body has no extra spacing */
+.leads-table .ant-table-tbody {
+  line-height: 1 !important;
+}
+
+/* Aggressively remove empty row space between header and first data row */
+.custom-table .ant-table-tbody > tr:first-child {
+  border-top: none !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  height: auto !important;
+}
+
+/* Ensure first data row starts immediately after header */
+.custom-table .ant-table-tbody > tr:first-child > td {
+  border-top: none !important;
+  padding-top: 12px !important;
+  margin-top: 0 !important;
+  height: auto !important;
+}
+
+/* Force remove any spacing in table body */
+.custom-table .ant-table-tbody {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-spacing: 0 !important;
+}
+
+/* Remove any default spacing from table rows */
+.custom-table .ant-table-tbody > tr {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-spacing: 0 !important;
+}
+
+/* Target Ant Design's default empty row */
+.custom-table .ant-table-tbody > tr.ant-table-placeholder,
+.custom-table .ant-table-tbody > tr[data-row-key=''] {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove any empty rows that might appear */
+.custom-table .ant-table-tbody > tr:empty {
+  display: none !important;
+}
+
+/* Force remove any gap between header and body using table structure */
+.custom-table .ant-table-thead {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+/* Ensure no spacing in the table structure itself */
+.custom-table .ant-table-thead > tr > th {
+  margin-bottom: 0 !important;
+  padding-bottom: 12px !important;
+  border-bottom: none !important;
+}
+
+/* Force the first data row to have no top spacing */
+.custom-table .ant-table-tbody > tr:first-child > td {
+  margin-top: 0 !important;
+  padding-top: 12px !important;
+  border-top: none !important;
+  vertical-align: top !important;
+}
+
+/* Target the specific gap issue with more aggressive approach */
+.custom-table .ant-table-thead > tr > th {
+  margin-bottom: 0 !important;
+  padding-bottom: 12px !important;
+  border-bottom: none !important;
+  line-height: 1 !important;
+}
+
+/* Force the table body to start immediately after header */
+.custom-table .ant-table-tbody {
+  margin-top: -2px !important;
+  /* More aggressive negative margin */
+  padding-top: 0 !important;
+}
+
+/* Ensure first row has no top spacing at all */
+.custom-table .ant-table-tbody > tr:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+}
+
+/* Header spacing handled by rules above */
+
+/* Tbody margin handled by rules above */
+
+/* Remove any default spacing in table container */
+.custom-table .ant-table-container {
+  border-spacing: 0 !important;
+}
+
+/* Ensure no gap between header and body rows */
+.custom-table .ant-table-thead + .ant-table-tbody {
+  margin-top: 0 !important;
+}
+
+/* Consistent row styling */
+.custom-table .ant-table-tbody > tr {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Consistent cell styling */
+.custom-table .ant-table-tbody > tr > td {
+  margin: 0 !important;
+  vertical-align: middle !important;
+  /* Center align content */
+  padding: 12px 12px !important;
+  /* Consistent padding */
+  border-bottom: 2px solid rgba(229, 231, 235, 0.7) !important;
+  /* 2px width with 0.7 opacity */
+  position: relative;
+}
+
+/* Very close spacing between checkbox and leads name columns */
+.custom-table .ant-table-tbody > tr > td:first-child {
+  padding-right: 0px !important;
+  /* No padding for checkbox column */
+}
+
+.custom-table .ant-table-tbody > tr > td:nth-child(2) {
+  padding-left: 0px !important;
+  /* No padding for leads name column */
+}
+
+/* Header spacing handled by main rule above */
+
+/* Header and body spacing handled by rules above */
+
+/* Table spacing rules consolidated above */
+
+/* First row styling */
+.custom-table .ant-table-tbody > tr:first-child > td {
+  border-top: none !important;
+  /* Remove top border for seamless header transition */
+}
+
+/* Header border handled by main rule above */
+
+/* Header styling is now handled by the main .leads-table .ant-table-thead > tr > th rule above */
+
+/* Zebra pattern using data-row-key attribute */
+.leads-table .ant-table-tbody > tr[data-row-key] > td {
+  background-color: var(--color-surface-subtle) !important;
+  /* 3% gray for all data rows */
+  min-height: 48px !important;
+  /* Consistent height with header */
+  height: 48px !important;
+}
+
+.leads-table .ant-table-tbody > tr[data-row-key]:nth-of-type(odd) > td {
+  background-color: var(--color-surface-subtle) !important;
+  /* 3% gray for odd rows */
+}
+
+.leads-table .ant-table-tbody > tr[data-row-key]:nth-of-type(even) > td {
+  background-color: var(--color-surface-card) !important;
+  /* White for even rows */
+}
+
+/* Header with increased height for better prominence */
+.leads-table .ant-table-thead > tr > th {
+  background-color: var(--color-surface-subtle) !important;
+  /* 3% gray to match zebra stripes */
+  min-height: 58px !important;
+  /* Increased header height */
+  height: 58px !important;
+  border-bottom: 2px solid rgba(229, 231, 235, 0.7) !important;
+  /* 2px width with 0.7 opacity */
+}
+
+/* Reduce spacing between checkbox and leads name columns in header */
+.leads-table .ant-table-thead > tr > th:first-child {
+  padding-right: 0px !important;
+  /* Remove right padding of checkbox column */
+}
+
+.leads-table .ant-table-thead > tr > th:nth-child(2) {
+  padding-left: 0px !important;
+  /* Remove left padding of leads name column */
+}
+
+/* Hover effect */
+.leads-table .ant-table-tbody > tr[data-row-key]:hover > td {
+  background-color: var(--color-surface-hover) !important;
+}
+
+/* Remove bottom border from last row to avoid double border */
+.leads-table .ant-table-tbody > tr[data-row-key]:last-child > td {
+  border-bottom: none !important;
+}
+
+/* Override the table span rule for button content */
+.leads-table .ant-table-tbody > tr > td .ant-btn span,
+.leads-table .ant-table-tbody > tr > td .ant-btn .anticon {
+  color: inherit !important;
+  font-weight: inherit !important;
+}
+
+/* Force lead stage button text color using CSS custom properties */
+.leads-table .ant-table-tbody > tr > td .ant-btn.lead-stage-button,
+.leads-table .ant-table-tbody > tr > td .ant-btn.lead-stage-button > span {
+  color: var(--button-text-color, inherit) !important;
+}
+
+/* Nuclear option - very specific selector using CSS custom properties */
+.leads-table .ant-table-tbody > tr > td .ant-btn.lead-stage-button,
+.leads-table .ant-table-tbody > tr > td .ant-btn.lead-stage-button > span,
+.leads-table
+  .ant-table-tbody
+  > tr
+  > td
+  .ant-btn.lead-stage-button
+  .ant-btn-loading-icon,
+.leads-table .ant-table-tbody > tr > td .ant-btn.lead-stage-button .anticon {
+  color: var(--button-text-color, inherit) !important;
+}
+
+/* Make checkboxes square instead of circular */
+.custom-table .ant-checkbox-inner {
+  border-radius: 0 !important;
+  /* Square checkboxes */
+}
+
+/* Mobile table scrolling improvements */
+.custom-table {
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on iOS */
+  scrollbar-width: thin;
+  /* Thin scrollbar on Firefox */
+}
+
+.custom-table::-webkit-scrollbar {
+  height: 6px;
+  /* Height for horizontal scrollbar */
+}
+
+.custom-table::-webkit-scrollbar-track {
+  background: var(--color-surface-subtle);
+  /* Light gray track */
+  border-radius: 3px;
+}
+
+.custom-table::-webkit-scrollbar-thumb {
+  background: var(--color-text-subtle);
+  /* Gray scrollbar thumb */
+  border-radius: 3px;
+}
+
+.custom-table::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+  /* Darker on hover */
+}
+
+/* First column header padding handled by main rule above */
+
+/* First column padding handled by main cell rule above */
+
+/* Status button styles for leads */
+.status-button {
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  padding: 4px 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.status-button:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+/* Hide scrollbar while maintaining scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+.ant-popconfirm-message {
+  display: block !important;
+}
+
+/* Theme-aware Ant Design notifications (toast) */
+.ant-notification .ant-notification-notice {
+  background: var(--color-surface-card) !important;
+  border: 1px solid var(--color-border-default) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+.ant-notification .ant-notification-notice-error {
+  border-left: 4px solid var(--color-error) !important;
+}
+
+.ant-notification .ant-notification-notice-success {
+  border-left: 4px solid var(--color-success) !important;
+}
+
+.ant-notification .ant-notification-notice-warning {
+  border-left: 4px solid var(--color-warning) !important;
+}
+
+.ant-notification .ant-notification-notice-info {
+  border-left: 4px solid var(--color-accent-blue) !important;
+}
+
+.ant-notification .ant-notification-notice-message {
+  color: var(--color-text-primary) !important;
+  font-weight: 600;
+}
+
+.ant-notification .ant-notification-notice-description {
+  color: var(--color-text-muted) !important;
+}
+
+.ant-notification .ant-notification-notice-close {
+  color: var(--color-text-muted) !important;
+}
+
+.ant-notification .ant-notification-notice-close:hover {
+  color: var(--color-text-primary) !important;
+}

@@ -1,0 +1,262 @@
+/**
+ * Design tokens — single source of truth for colors, typography, spacing, radius, shadows.
+ * Edit this file to rebrand or redesign the entire application.
+ */
+
+:root {
+  /* Brand — channel triples, so Tailwind alpha modifiers (bg-primary/40) resolve.
+     Rebrand by editing these; the --color-brand-* vars below are derived. */
+  --brand-rgb: 237 105 37;
+  --brand-hover-rgb: 212 94 31;
+  --brand-muted-rgb: 253 240 233;
+  /* Collaboration embed accent — indigo identity shared with the Collaboration
+     app (#0d3aa5). Separate from CRM brand orange so dock / space pickers match
+     the iframe rather than reminting collab to orange. */
+  --collab-rgb: 13 58 165;
+  --collab-strong-rgb: 2 37 130;
+  --collab-tint-rgb: 238 245 255;
+  --collab-header-rgb: 238 245 255;
+
+  --color-brand: rgb(var(--brand-rgb));
+  --color-brand-hover: rgb(var(--brand-hover-rgb));
+  --color-brand-muted: rgb(var(--brand-muted-rgb));
+  --color-brand-border: #f5d4c0;
+  --color-brand-foreground: #ffffff;
+
+  /* Accent (legacy brand blue) */
+  --color-accent-blue: #1d9bf0;
+
+  /* Surfaces */
+  --color-surface-page: #f2f4f7;
+  --color-surface-card: #ffffff;
+  --color-surface-elevated: #f9fafb;
+  --color-surface-subtle: #f7f7f7;
+  --color-surface-hover: #f1f5f9;
+  --color-surface-selected: #f5f5f5;
+
+  /* Text */
+  --color-text-primary: #111827;
+  --color-text-secondary: #1c1e21;
+  --color-text-muted: #6b7280;
+  --color-text-subtle: #9ca3af;
+  --color-text-inverse: #ffffff;
+
+  /* Borders */
+  --color-border-default: #e5e7eb;
+  --color-border-strong: #d1d5db;
+  --color-border-input: #e9eaec;
+  --color-border-focus: #4b5563;
+
+  /* Status */
+  --color-success: #0ba259;
+  --color-success-muted: #55c790;
+  --color-success-bg: rgba(85, 199, 144, 0.2);
+  --color-warning: #e6bb20;
+  --color-warning-muted: #ffde65;
+  --color-warning-bg: rgba(255, 222, 101, 0.2);
+  --color-error: #e03137;
+  --color-error-muted: #fa3a3a;
+  --color-error-bg: rgba(250, 58, 58, 0.2);
+
+  /* Extended palette */
+  --color-orange: #fe964a;
+  --color-blue: #0062ff;
+  --color-purple: #8c62ff;
+  --color-light-purple: #e7e7ff;
+  --color-lightblue: #d3e4f0;
+
+  --pill-deal-text: #1a8a4a;
+  --pill-lead-text: #b07d00;
+  --pill-success-text: #1a8a4a;
+  --pill-warning-text: #b07d00;
+  --pill-danger-text: #dc2626;
+  --pill-purple-text: #7c3aed;
+
+  /* shadcn-compatible semantic tokens (HSL components without hsl()) */
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 23 84% 54%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  /* Neutral borders (avoid cool slate/blue cast). */
+  --border: 0 0% 89%;
+  --input: 0 0% 89%;
+  --ring: 0 0% 64%;
+
+  /* Typography — self-hosted via @fontsource-variable/public-sans (no Google Fonts fetch at build) */
+  --font-sans: 'Public Sans Variable', 'Public Sans', system-ui, sans-serif;
+  --font-sans-token: var(--font-sans), 'Inter', sans-serif;
+  --font-heading: var(--font-sans), 'Inter', sans-serif;
+  --text-xs: 0.6875rem; /* 11px */
+  --text-sm: 0.8125rem; /* 13px */
+  --text-base: 0.875rem; /* 14px */
+  --text-lg: 1rem; /* 16px */
+  --text-xl: 1.125rem; /* 18px */
+  --text-2xl: 1.5rem; /* 24px */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  /* Spacing */
+  --space-page-x: 1.5rem;
+  --space-page-y: 1.5rem;
+  --space-card: 1rem;
+  --space-section: 1.5rem;
+  --space-input-height: 2.5rem;
+  --space-control-height: 3.375rem; /* 54px */
+
+  /* Radius */
+  --radius: 0.625rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  /* Chart palette */
+  --chart-1: var(--color-brand);
+  --chart-2: var(--color-blue);
+  --chart-3: var(--color-success);
+  --chart-4: var(--color-warning);
+  --chart-5: var(--color-purple);
+
+  /* Kanban / pipeline stage presets */
+  --stage-violet-bg: #f5f3ff;
+  --stage-violet-border: #e9d5ff;
+  --stage-sky-bg: #eff6ff;
+  --stage-sky-border: #bfdbfe;
+  --stage-mint-bg: #ecfdf5;
+  --stage-mint-border: #a7f3d0;
+  --stage-amber-bg: #fffbeb;
+  --stage-amber-border: #fde68a;
+  --stage-emerald-bg: #ecfdf3;
+  --stage-emerald-border: #86efac;
+  --stage-rose-bg: #fef2f2;
+  --stage-rose-border: #fecaca;
+  --stage-purple-bg: #f5f3ff;
+  --stage-purple-border: #e9d5ff;
+  --stage-orange-bg: #fef3eb;
+  --stage-orange-border: #f5d4c0;
+  --stage-green-bg: #ecfdf5;
+  --stage-green-border: #a7f3d0;
+  --stage-yellow-bg: #fffbeb;
+  --stage-yellow-border: #fde68a;
+  --stage-lime-bg: #ecfdf3;
+  --stage-lime-border: #86efac;
+  --stage-red-bg: #fef2f2;
+  --stage-red-border: #fecaca;
+  --stage-slate-bg: #f8fafc;
+  --stage-slate-border: #cbd5e1;
+}
+
+.dark {
+  --brand-rgb: 240 122 58;
+  --brand-hover-rgb: 237 105 37;
+  --brand-muted-rgb: 61 42 31;
+  --collab-rgb: 107 142 245;
+  --collab-strong-rgb: 13 58 165;
+  --collab-tint-rgb: 10 26 61;
+
+  --color-brand: rgb(var(--brand-rgb));
+  --color-brand-hover: rgb(var(--brand-hover-rgb));
+  --color-brand-muted: rgb(var(--brand-muted-rgb));
+  --color-brand-border: #5c3d2a;
+  --color-brand-foreground: #ffffff;
+
+  --color-surface-page: #0f172a;
+  --color-surface-card: #1e293b;
+  --color-surface-elevated: #334155;
+  --color-surface-subtle: #1e293b;
+  --color-surface-hover: #334155;
+  --color-surface-selected: #475569;
+
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-text-subtle: #64748b;
+  --color-text-inverse: #0f172a;
+
+  --color-border-default: #3f3f46;
+  --color-border-strong: #52525b;
+  --color-border-input: #3f3f46;
+  --color-border-focus: #a1a1aa;
+
+  --color-error-bg: rgba(224, 49, 55, 0.15);
+  --color-success-bg: rgba(11, 162, 89, 0.15);
+  --color-warning-bg: rgba(230, 187, 32, 0.15);
+
+  --pill-deal-text: #86efac;
+  --pill-lead-text: #fcd34d;
+  --pill-success-text: #86efac;
+  --pill-warning-text: #fcd34d;
+  --pill-danger-text: #fca5a5;
+  --pill-purple-text: #c4b5fd;
+
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 23 74% 58%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  /* Neutral borders (avoid cool slate/blue cast). */
+  --border: 0 0% 18%;
+  --input: 0 0% 18%;
+  --ring: 0 0% 45%;
+
+  /* Kanban / pipeline stage presets */
+  --stage-violet-bg: #1e1b2e;
+  --stage-violet-border: #3d3654;
+  --stage-sky-bg: #152028;
+  --stage-sky-border: #2a4050;
+  --stage-mint-bg: #152420;
+  --stage-mint-border: #2a4538;
+  --stage-amber-bg: #241f18;
+  --stage-amber-border: #453a2a;
+  --stage-emerald-bg: #152218;
+  --stage-emerald-border: #2a4532;
+  --stage-rose-bg: #241818;
+  --stage-rose-border: #453030;
+  --stage-purple-bg: #1f1a2e;
+  --stage-purple-border: #3d3254;
+  --stage-orange-bg: #241a14;
+  --stage-orange-border: #453528;
+  --stage-green-bg: #152418;
+  --stage-green-border: #2a4530;
+  --stage-yellow-bg: #242018;
+  --stage-yellow-border: #45402a;
+  --stage-lime-bg: #1a2418;
+  --stage-lime-border: #354530;
+  --stage-red-bg: #241515;
+  --stage-red-border: #453030;
+  --stage-slate-bg: #1e293b;
+  --stage-slate-border: #334155;
+}

@@ -1,0 +1,1 @@
+export { DealsLeadsBadges } from './DealsLeadsBadges';

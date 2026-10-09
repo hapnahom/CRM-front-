@@ -1,0 +1,105 @@
+/* Stagnant deals table styling - matching leads table */
+.stagnantDealsTable .ant-table-thead > tr > th {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  font-family: 'Inter', sans-serif !important;
+  color: #111827 !important; /* text-gray-900 */
+  background-color: #f7f7f7 !important; /* 3% gray to match zebra stripes */
+  border-bottom: 2px solid rgba(229, 231, 235, 0.7) !important; /* 2px width with 0.7 opacity */
+  padding: 12px 12px !important; /* Consistent padding */
+  text-align: left !important;
+  text-transform: none !important; /* Normal case */
+  letter-spacing: normal !important; /* Normal spacing */
+  line-height: 1.4 !important; /* Better line height */
+  height: auto !important;
+  margin: 0 !important;
+  vertical-align: middle !important; /* Center align vertically */
+  min-height: 58px !important; /* Increased header height */
+  height: 58px !important;
+}
+
+/* Stagnant deals table body styling - base styling without background */
+.stagnantDealsTable .ant-table-tbody > tr[data-row-key] > td {
+  min-height: 48px !important; /* Consistent height with header */
+  height: 48px !important;
+  margin: 0 !important;
+  vertical-align: middle !important; /* Center align content */
+  padding: 12px 12px !important; /* Consistent padding */
+  border-bottom: 2px solid rgba(229, 231, 235, 0.7) !important; /* 2px width with 0.7 opacity */
+  position: relative;
+}
+
+/* Zebra striping for stagnant deals table - using the most specific selectors */
+.stagnantDealsTable .ant-table .ant-table-tbody tr:nth-child(odd) td {
+  background-color: #f7f7f7 !important; /* 3% gray for odd rows */
+}
+
+.stagnantDealsTable .ant-table .ant-table-tbody tr:nth-child(even) td {
+  background-color: #ffffff !important; /* White for even rows */
+}
+
+/* Alternative approach with data-row-key */
+.stagnantDealsTable .ant-table-tbody > tr[data-row-key]:nth-child(odd) > td {
+  background-color: #f7f7f7 !important; /* 3% gray for odd rows */
+}
+
+.stagnantDealsTable .ant-table-tbody > tr[data-row-key]:nth-child(even) > td {
+  background-color: #ffffff !important; /* White for even rows */
+}
+
+/* Hover effect for stagnant deals table - only on actual hover */
+.stagnantDealsTable .ant-table-tbody > tr[data-row-key]:hover > td {
+  background-color: #f1f5f9 !important;
+}
+
+/* Remove bottom border from last row to avoid double border */
+.stagnantDealsTable .ant-table-tbody > tr[data-row-key]:last-child > td {
+  border-bottom: none !important;
+}
+
+/* Text styling for stagnant deals table */
+.stagnantDealsTable .ant-table-tbody > tr > td span {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Add specific color for regular table content (not buttons) */
+.stagnantDealsTable .ant-table-tbody > tr > td:not(:has(.ant-btn)) span {
+  color: #111827 !important;
+}
+
+/* Ensure button content inherits its color */
+.stagnantDealsTable .ant-table-tbody > tr > td .ant-btn,
+.stagnantDealsTable .ant-table-tbody > tr > td .ant-btn span,
+.stagnantDealsTable .ant-table-tbody > tr > td .ant-btn .anticon {
+  color: inherit !important;
+}
+
+/* Hide both placeholder and measuring rows for stagnant deals table */
+.stagnantDealsTable .ant-table-tbody > tr.ant-table-placeholder,
+.stagnantDealsTable .ant-table-tbody > tr.ant-table-measure-row {
+  display: none !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide their cells too */
+.stagnantDealsTable .ant-table-tbody > tr.ant-table-placeholder > td,
+.stagnantDealsTable .ant-table-tbody > tr.ant-table-measure-row > td {
+  display: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  visibility: hidden !important;
+}
+
+/* Ensure the table body has no extra spacing */
+.stagnantDealsTable .ant-table-tbody {
+  line-height: 1 !important;
+}

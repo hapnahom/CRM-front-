@@ -1,0 +1,79 @@
+{
+  "root": true,
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "overrides": [
+    {
+      "files": [
+        "lib/design-tokens.ts",
+        "utils/colors.ts",
+        "styles/**/*.css",
+        "components/Icons/**",
+        "components/common/logo/**",
+        "**/mockData.ts",
+        "**/seedDeals.ts",
+        "**/*Data.ts"
+      ],
+      "rules": {
+        "no-restricted-syntax": "off"
+      }
+    }
+  ],
+  "rules": {
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/^#[0-9a-fA-F]{3,8}$/]",
+        "message": "Avoid hardcoded hex colors. Use Tailwind token classes (bg-brand, text-foreground) or lib/design-tokens.ts. See docs/design-system.md"
+      },
+      {
+        "selector": "TemplateElement[value.raw=/#[0-9a-fA-F]{3,8}/]",
+        "message": "Avoid hardcoded hex in template strings. Use design tokens. See docs/design-system.md"
+      }
+    ],
+    "no-console": "error",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "prettier/prettier": "error",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variableLike",
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "variable",
+        "modifiers": ["const"],
+        "format": ["camelCase", "UPPER_CASE", "PascalCase"]
+      },
+      {
+        "selector": "function",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": "parameter",
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "memberLike",
+        "modifiers": ["private"],
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "class",
+        "format": ["PascalCase"]
+      }
+    ]
+  }
+}

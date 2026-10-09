@@ -1,0 +1,88 @@
+/* ========================================
+   PDF Export Styles
+   ======================================== */
+
+/* Hide elements during PDF export */
+.hide-on-export,
+.no-print {
+  display: block !important;
+}
+
+/* Print-specific media query for better PDF rendering */
+@media print {
+  .hide-on-export,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Ensure full width for PDF */
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Prevent page breaks inside important elements */
+  .chart-container,
+  .kpi-card,
+  .dashboard-section {
+    page-break-inside: avoid;
+  }
+
+  /* Better spacing for printed content */
+  .dashboard-content {
+    padding: 20px;
+  }
+}
+
+/* Styles for PDF export canvas rendering */
+.pdf-export-ready {
+  background: white !important;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* Ensure charts render properly */
+.pdf-export-ready canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Ensure text is crisp in PDF */
+.pdf-export-ready * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Better table rendering for PDF */
+.pdf-export-ready table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.pdf-export-ready table td,
+.pdf-export-ready table th {
+  padding: 8px;
+  border: 1px solid var(--color-border-default);
+}
+
+/* Ensure shadows don't look pixelated */
+.pdf-export-ready {
+  box-shadow: none !important;
+}
+
+.pdf-export-ready .shadow-lg,
+.pdf-export-ready .shadow-md,
+.pdf-export-ready .shadow-sm {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Hide scrollbars while keeping scroll/drag movement (matches design repo) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
